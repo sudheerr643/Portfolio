@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sudheer Reddy</title>
     <link rel="stylesheet" href="/Css/styles.css">
+    <script src="https://kit.fontawesome.com/698555d9d4.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="header">
@@ -20,7 +21,146 @@
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>Hi, I'm <span class="first-name">Sudheer</span> <br> Reddy From India</h1>
+            </div>
         </div>
     </div>
+
+    <!-- ----------------about-------------->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="/images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>Born in 1997 in Hyderabad, India. I believe web design
+                        can be more diverse and inspiring. With a mission to
+                        present the possibilities of web design, I am pursuing
+                        new expressions through experiments and thoughts.
+                        I like to craft solid and scalable frontend products with
+                        great user experiences.</p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>UI/UX</span><br>Designing Web App Interfaces</li>
+                                <li><span>Web Development</span><br>Web App Development</li>
+                                <li><span>Front End Development</span><br>Front-End Web Developer</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2023</span><br>B.Tech in Computer Science</li>
+                                <li><span>2015</span><br>Intermediate</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----------------------services----------------------->
+
+    <div id="services">
+        <div class="container">
+            <h1 class="subtitle">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-palette"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>I will create modern website designs in Figma & Adobe. </p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Development</h2>
+                    <p>I will develop modern websites from scratch. </p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-shuffle"></i>
+                    <h2>PSD to Website</h2>
+                    <p>I will convert web designs from PSD to websites. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-----------------portfolio-------------->
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="subtitle">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="/images/work.jpg">
+                    <h2>Under Progress...</h2>
+                </div>
+                <div class="work">
+                    <img src="/images/work.jpg">
+                    <h2>Under Progress...</h2>
+                </div>
+                <div class="work">
+                    <img src="/images/work.jpg">
+                    <h2>Under Progress...</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------------------contact----------------->
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="subtitle">Contact Me</h1>
+                    <p><i class="fa-sharp fa-solid fa-paper-plane"></i> sudheerr643@hotmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +91 9063510510</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/am__sudheer/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/sudheerr643/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/sudheerr643"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link")
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+
+    </script>
+
 </body>
 </html>
